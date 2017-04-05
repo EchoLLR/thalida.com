@@ -1,5 +1,7 @@
 node_modules/
 dist/
+_dist/
+__archives
 
 logs/*
 !.gitkeep
