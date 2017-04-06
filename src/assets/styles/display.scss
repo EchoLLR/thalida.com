@@ -1,0 +1,40 @@
+@import './mixins';
+
+.clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.clickable {
+    cursor: pointer;
+    @extend %disable-selection;
+}
+
+.float-left {
+    float: left;
+    position: relative;
+}
+
+.float-right {
+    float: right;
+    position: relative;
+}
+
+.visible-mobile {
+    display: initial;
+
+    @media all and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.hidden-mobile {
+    display: none;
+
+    @media all and (min-width: 768px) {
+        display: initial;
+    }
+}
