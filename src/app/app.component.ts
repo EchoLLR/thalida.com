@@ -24,10 +24,17 @@ export class AppComponent {
     this.jobs = jobs;
     this.projects = projects;
     this.visibleProjects = _.filter(this.projects, {hidden: false});
+    this.featuredProject = this.getFeaturedProject(this.projects);
+  }
 
-    let featuredProjs = _.filter(this.projects, {featured: true});
+  getFeaturedProject(projects: Project[]) {
+    let foundFeaturedProject = <Project>{};
+    let featuredProjs = _.filter(projects, {featured: true});
+
     if (featuredProjs.length > 0) {
-      this.featuredProject = featuredProjs[0];
+      foundFeaturedProject = featuredProjs[0];
     }
+
+    return foundFeaturedProject;
   }
 }
