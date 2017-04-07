@@ -1,12 +1,12 @@
 @import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
 
-@import './assets/styles/colors';
-@import './assets/styles/mixins';
+@import './app/styles/colors';
+@import './app/styles/mixins';
 
-@import './assets/styles/display';
-@import './assets/styles/type';
-@import './assets/styles/emojis';
-@import './assets/styles/icons';
+@import './app/styles/display';
+@import './app/styles/type';
+@import './app/styles/emojis';
+@import './app/styles/icons';
 
 html {
     box-sizing: border-box;
@@ -62,5 +62,17 @@ body {
 
     @media all and (min-width: 1024px) {
         overflow: hidden;
+    }
+}
+
+.color-code {
+    .swatch {
+        display: inline-block;
+        position: relative;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 1px solid rgba(0,0,0,0.3);
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
     }
 }

@@ -1,12 +1,7 @@
-@import '../assets/styles/colors';
-@import '../assets/styles/mixins';
+@import '../../styles/colors';
+@import '../../styles/mixins';
 
-.app {
-    display: block;
-    position: relative;
-    height: 100%;
-    width: 100%;
-
+.main-page {
     .section {
         padding: 10%;
 
@@ -137,64 +132,5 @@
                 }
             }
         }
-    }
-
-    .footer {
-        display: block;
-        width: 100%;
-        padding: 3% 10%;
-
-        @media all and (min-width: 768px) {
-            padding-left: 15%;
-            padding-right: 15%;
-        }
-
-        background-color: $yellow-1;
-        text-align: center;
-        text-transform: uppercase;
-
-        .footer-section {
-            display: inline-block;
-            vertical-align: middle;
-            width: 49%;
-        }
-
-        .copyright-section {
-            text-align: left;
-            line-height: 1.5;
-        }
-
-        .twitter-section {
-            display: inline-block;
-            padding: 0;
-            margin: 0;
-
-            @media all and (max-width: 400px){
-                font-size: 1.2rem;
-                line-height: 30px;
-            }
-
-            @media all and (min-width: 768px) and (max-width: 1024px){
-                font-size: 1.2rem;
-                line-height: 30px;
-            }
-        }
-
-        .small {
-            color: $font-color-dark;
-            opacity: 0.5;
-        }
-    }
-}
-
-.color-code {
-    .swatch {
-        display: inline-block;
-        position: relative;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        border: 1px solid rgba(0,0,0,0.3);
-        box-shadow: 0 0 5px rgba(0,0,0,0.2);
     }
 }
