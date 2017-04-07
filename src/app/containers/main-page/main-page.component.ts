@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
 import * as _ from 'lodash';
 
-import { Extra, extras } from '../../data/extras.data';
-import { Job, jobs } from '../../data/jobs.data';
-import { Project, projects } from '../../data/projects.data';
+import { Extra } from '../../models/extra';
+import { extras } from '../../data/extras';
+
+import { Job } from '../../models/job';
+import { jobs } from '../../data/jobs';
+
+import { Project } from '../../models/project';
+import { projects } from '../../data/projects';
 
 @Component({
   selector: 'app-main-page',

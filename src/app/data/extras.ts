@@ -1,9 +1,4 @@
-export interface Extra {
-  title: string;
-  link: string;
-  shortDescription: string;
-  longDescription?: string[];
-}
+import { Extra } from '../models/extra';
 
 export const extras: Extra[] = [
   {

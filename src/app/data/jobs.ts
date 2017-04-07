@@ -1,9 +1,4 @@
-export interface Job {
-  company: string;
-  title: string;
-  start: string;
-  end?: string;
-}
+import { Job } from '../models/job';
 
 export const jobs: Job[] = [
   {

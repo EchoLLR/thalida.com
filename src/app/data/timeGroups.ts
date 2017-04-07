@@ -1,13 +1,6 @@
-export interface TimeGroups {
-    name: string;
-    label: string;
-    beginAt: number;
-    color: string;
-    salutation: string;
-    sayings: string[];
-}
+import { TimeGroup } from '../models/time-group';
 
-export const timeGroups: TimeGroups[] = [
+export const timeGroups: TimeGroup[] = [
     {
         "name": "nightowl",
         "label": "Night Owl",

@@ -1,10 +1,7 @@
-export interface VisitGroups {
-    name: string;
-    minVisits: number;
-    sayings: string[];
-}
+import { VisitGroup } from '../models/visit-group';
 
-export const visitGroups: VisitGroups[] = [
+
+export const visitGroups: VisitGroup[] = [
     {
         "name": "first",
         "minVisits": 1,
