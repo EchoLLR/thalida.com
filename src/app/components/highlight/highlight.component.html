@@ -1,11 +1,3 @@
-<!-- <span
-    class="highlight"
-    ng-bind-html="$ctrl.text"
-    tooltips
-    tooltip-class="t_highlight-tooltip"
-    tooltip-side="{{$ctrl.tooltipSide}}"
-    tooltip-template="{{$ctrl.tooltip}}">
-</span> -->
 <span class="highlight" [mdTooltip]="tooltipText" [mdTooltipPosition]="tooltipPosition">
     <ng-content></ng-content>
 </span>
