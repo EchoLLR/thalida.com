@@ -1,0 +1,35 @@
+export interface VisitGroups {
+    name: string;
+    minVisits: number;
+    sayings: string[];
+}
+
+export const visitGroups: VisitGroups[] = [
+    {
+        "name": "first",
+        "minVisits": 1,
+        "sayings": null
+    },
+    {
+        "name": "second",
+        "minVisits": 2,
+        "sayings": [
+            "Welcome back,",
+            "Damn Daniel back at it again!",
+            "Back again?",
+            "Came back for seconds?",
+            "Hey again!"
+        ]
+    },
+    {
+        "name": "many",
+        "minVisits": 3,
+        "sayings": [
+            "Ah, a serial visitor&hellip;",
+            "How sweet, you&rsquo;re back!",
+            "Nice to have you back!",
+            "Welcome back,",
+            "Oh, how wonderful, you're back!"
+        ]
+    }
+]
