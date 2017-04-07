@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import * as _ from 'lodash';
+import * as moment from 'moment';
 
 import { Extra, extras } from './data/extras.data';
 import { Job, jobs } from './data/jobs.data';
@@ -11,7 +12,7 @@ import { Project, projects } from './data/projects.data';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  copyrightYear: string;
+  copyrightYear: String;
   extras: Extra[];
   jobs: Job[];
   projects: Project[];
@@ -19,7 +20,7 @@ export class AppComponent {
   featuredProject: Project;
 
   constructor() {
-    this.copyrightYear = 'foo';
+    this.copyrightYear = moment().format('Y');
     this.extras = extras;
     this.jobs = jobs;
     this.projects = projects;
