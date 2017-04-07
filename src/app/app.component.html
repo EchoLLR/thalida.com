@@ -45,5 +45,114 @@
                 </p>
             </div>
         </div>
+
+        <div class="section graphic-section">
+            <div class="graphic graphic-coding"></div>
+            <p class="caption no-buffer">
+                #WOCinTech Chat stock photo | Look, ma my hands!
+            </p>
+        </div>
+
+        <div class="section projects-section">
+            <div class="section-header">
+                <h2>Projects</h2>
+            </div>
+            <div class="section-body">
+                <div class="project" *ngFor="let project of visibleProjects">
+                    <div class="clearfix">
+                        <a  class="project-title float-left"
+                            [href]="project.link"
+                            target="_blank">
+                            <h3 class="ellipsis"
+                                [innerHTML]="project.title"></h3>
+                        </a>
+                        <div class="project-icons float-right">
+                            <a  class="project-icon"
+                                *ngIf="project.github"
+                                [href]="project.github"
+                                target="_blank">
+                                <span class="icon icon-github-blue"></span>
+                            </a>
+                            <a  class="project-icon"
+                                *ngIf="project.dribbble"
+                                [href]="project.dribbble"
+                                target="_blank">
+                                <span class="icon icon-dribbble-blue"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <p  class="normal no-buffer"
+                        [innerHTML]="project.shortDescription">
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section featured-section bg-yellow" *ngIf="featuredProject">
+            <h2>Featured Project: {{featuredProject.title}}</h2>
+            <div class="main-view-section-data">
+                <p class="normal"
+                   *ngFor="let paragraph of featuredProject.longDescription"
+                   [innerHTML]="paragraph">
+                </p>
+            </div>
+        </div>
+
+        <div class="section graphic-section">
+            <div class="graphic graphic-standing"></div>
+            <p class="caption no-buffer">
+                #WOCinTech Chat stock photo | Me, posing for the gods.
+            </p>
+        </div>
+
+        <div class="section extras-section">
+            <div class="section-header">
+                <h2>In the Wild</h2>
+            </div>
+            <div class="section-body">
+                <div *ngFor="let extra of extras">
+                    <a [href]="extra.link" target="_blank">
+                        <h3 [innerHTML]="extra.title"></h3>
+                    </a>
+                    <p class="normal no-buffer">
+                        {{extra.shortDescription}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section jobs-section bg-gray">
+            <div class="section-header">
+                <h2>Work History</h2>
+            </div>
+            <div class="section-body">
+                <div *ngFor="let job of jobs">
+                    <h3>
+                        {{ job.company }}
+                        <span class="job-date">{{ job.start }} - {{ job.end }}</span>
+                    </h3>
+                    <p class="normal no-buffer">
+                        {{job.title}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer clearfix">
+            <div class="footer-section">
+                <p class="copyright-section float-left no-buffer small">
+                    &copy; {{copyrightYear}}<br />
+                    Emoji by <a href="http://emojione.com/" target="_blank">EmojiOne</a><br />
+                    Powered by <a href="https://darksky.net/poweredby/" target="_blank">Dark Sky</a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4 class="twitter-section float-right">
+                    <a href="https://twitter.com/thalidanoel" target="_blank">
+                        <span class="emoji emoji-raised-hands"></span> @thalidanoel
+                    </a>
+                </h4>
+            </div>
+        </div>
     </app-panel>
 </div>
