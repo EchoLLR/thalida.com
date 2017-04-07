@@ -1,6 +1,74 @@
 <div class="app">
     <app-panel></app-panel>
     <app-panel>
+        <div class="section live-section bg-yellow">
+            <h2>
+                <app-highlight
+                    tooltipText="The scene displayed to the right (or above) is based on your the current time and weather conditions for your area."
+                    tooltipPosition="after">
+                    Live-ish
+                </app-highlight> Scene
+            </h2>
+            <span class="micro">Last Updated: {{lastUpdated}}</span>
+            <div class="main-view-section-data">
+                <!-- <p class="normal">
+                    <span class="small">
+                        <app-highlight
+                            tooltipText="Total visits is fairly inaccurate since it's tracked using local storage, which means it's only for this browser and computer combo."
+                            tooltipPosition="after">
+                            Total Visits:
+                        </app-highlight>
+                    </span>
+                    {{totalVisits}}
+                </p> -->
+                <!-- <p class="normal">
+                    <span class="small">
+                        <app-highlight
+                            text="Time Group:"
+                            tooltipText="I split the day into chuncks, and based on your current time I determine your Time Group."
+                            tooltipPosition="after">
+                        </app-highlight>
+                    </span>
+                    {{currFancyTime.data.label}}
+                </p>
+                <p class="normal">
+                    <span class="small">
+                        <app-highlight
+                            text="Time Gradient:"
+                            tooltipText="The colors used for the gradient animation on the scene, these colors are based on your current Time Group."
+                            tooltipPosition="after">
+                        </app-highlight>
+                    </span>
+                    <span class="color-code" ng-repeat="item in main.currFancyTime.range track by $index">
+                        <span class="swatch" ng-style="{'background': item.color}"></span>
+                        {{item.color}}
+                    </span>
+                </p>
+                <p class="normal">
+                    <span class="small">
+                        <app-highlight
+                            text="Weather:"
+                            tooltipText="If you know, you wanna use my site as your defacto weather.com. It’s kinda cool, and I made some wicked low poly weather graphics."
+                            tooltipPosition="after">
+                        </app-highlight>
+                    </span>
+
+                    <span ng-show="main.currFancyWeather.summary">
+                        {{currFancyWeather.temperature}}° and {{currFancyWeather.summary}}
+                    </span>
+
+                    <span class="bold"
+                         ng-hide="main.currFancyWeather.summary.length > 0"
+                         ng-switch on="main.geolocation.statusType">
+                        <span ng-switch-when="error-location">{{geolocation.statusText}}</span>
+                        <span ng-switch-when="success-location">{{geolocation.statusText}}</span>
+                        <span ng-switch-when="loading-location">Locating&hellip;</span>
+                        <span ng-switch-when="loading-weather">Getting weather&hellip;</span>
+                    </span>
+                </p> -->
+            </div>
+        </div>
+
         <div class="section intro-section">
             <div class="section-header">
                 <h2>Introudction</h2>

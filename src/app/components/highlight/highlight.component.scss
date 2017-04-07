@@ -45,4 +45,14 @@
             background-color: $teal-1;
         }
     }
+
+    :host-context(.bg-yellow) & {
+        &:after {
+            background-color: $teal-1;
+        }
+
+        &:hover:after {
+            background-color: $purple-2;
+        }
+    }
 }

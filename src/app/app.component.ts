@@ -28,7 +28,7 @@ export class AppComponent {
     this.featuredProject = this.getFeaturedProject(this.projects);
   }
 
-  getFeaturedProject(projects: Project[]) {
+  getFeaturedProject(projects: Project[]) : Project {
     let foundFeaturedProject = <Project>{};
     let featuredProjs = _.filter(projects, {featured: true});
 

@@ -36,6 +36,16 @@
             background-color: $purple-1;;
         }
 
+        &.live-section {
+            .small {
+                margin-right: 5px;
+            }
+
+            .color-code {
+                margin-right: 10px;
+            }
+        }
+
         &.intro-section {}
 
         &.graphic-section {
