@@ -1,38 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash';
 
-import { extras } from '../../data/extras';
-import { jobs } from '../../data/jobs';
-import { projects } from '../../data/projects';
+import { ProjectService } from '../../services/project/project.service';
+import { JobService } from '../../services/job/job.service';
+import { ExtraService } from '../../services/extra/extra.service';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent {
-  extras: Extra[];
-  jobs: Job[];
-  projects: Project[];
-  visibleProjects: Project[];
+export class MainComponent implements OnInit  {
+  extras: Extra[] = [];
+  jobs: Job[] = [];
+  visibleProjects: Project[] = [];
   featuredProject: Project;
 
-  constructor() {
-    this.extras = extras;
-    this.jobs = jobs;
-    this.projects = projects;
-    this.visibleProjects = this.projects.filter((project) => !project.hidden);
-    this.featuredProject = this.getFeaturedProject(this.projects);
-  }
+  constructor(
+    private projectService: ProjectService,
+    private jobService: JobService,
+    private extraService: ExtraService
+  ) {}
 
-  getFeaturedProject(projects: Project[]) : Project {
-    let foundFeaturedProject = <Project>{};
-    let featuredProjects = this.projects.filter((project) => project.featured);
-
-    if (featuredProjects.length > 0) {
-      foundFeaturedProject = featuredProjects[0];
-    }
-
-    return foundFeaturedProject;
+  ngOnInit(): void {
+    this.jobs = this.jobService.getJobs();
+    this.extras = this.extraService.getExtras();
+    this.visibleProjects = this.projectService.getVisibleProjects();
+    this.featuredProject = this.projectService.getFeaturedProjects()[0];
   }
 }

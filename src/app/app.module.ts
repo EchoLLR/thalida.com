@@ -14,6 +14,10 @@ import { HighlightComponent } from './components/highlight/highlight.component';
 import { AppComponent } from './views/app/app.component';
 import { MainComponent } from './views/main/main.component';
 
+import { ProjectService } from './services/project/project.service';
+import { JobService } from './services/job/job.service';
+import { ExtraService } from './services/extra/extra.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +31,11 @@ import { MainComponent } from './views/main/main.component';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    ProjectService,
+    JobService,
+    ExtraService
+  ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

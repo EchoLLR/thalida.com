@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
 
 @Component({
@@ -6,10 +6,12 @@ import * as moment from 'moment';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  copyrightYear: String;
+export class AppComponent implements OnInit {
+  copyrightYear: String = '';
 
-  constructor() {
+  constructor() {}
+
+  ngOnInit(): void {
     this.copyrightYear = moment().format('Y');
   }
 }
