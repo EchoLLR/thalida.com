@@ -1,6 +1,3 @@
-import { VisitGroup } from '../models/visit-group';
-
-
 export const visitGroups: VisitGroup[] = [
     {
         "name": "first",

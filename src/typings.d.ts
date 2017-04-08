@@ -20,9 +20,9 @@ interface Job {
 
 interface Project {
   hidden: boolean;
-  featured?: boolean;
   title: string;
   shortDescription: string;
+  featured?: boolean;
   longDescription?: string[];
   link?: string;
   github?: string;

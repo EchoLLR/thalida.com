@@ -1,5 +1,3 @@
-import { TimeGroup } from '../models/time-group';
-
 export const timeGroups: TimeGroup[] = [
     {
         "name": "nightowl",

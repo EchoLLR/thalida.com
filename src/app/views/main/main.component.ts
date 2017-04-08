@@ -1,13 +1,8 @@
 import { Component } from '@angular/core';
 import * as _ from 'lodash';
 
-// import { Extra } from '../../models/extra';
 import { extras } from '../../data/extras';
-
-import { Job } from '../../models/job';
 import { jobs } from '../../data/jobs';
-
-import { Project } from '../../models/project';
 import { projects } from '../../data/projects';
 
 @Component({

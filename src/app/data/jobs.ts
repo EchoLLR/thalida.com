@@ -1,5 +1,3 @@
-import { Job } from '../models/job';
-
 export const jobs: Job[] = [
   {
       "company": "Kinnek",
