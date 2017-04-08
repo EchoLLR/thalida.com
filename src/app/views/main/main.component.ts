@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import * as _ from 'lodash';
 
-import { Extra } from '../../models/extra';
+// import { Extra } from '../../models/extra';
 import { extras } from '../../data/extras';
 
 import { Job } from '../../models/job';
@@ -11,11 +11,11 @@ import { Project } from '../../models/project';
 import { projects } from '../../data/projects';
 
 @Component({
-  selector: 'app-main-page',
-  templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.scss']
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.scss']
 })
-export class MainPageComponent {
+export class MainComponent {
   extras: Extra[];
   jobs: Job[];
   projects: Project[];

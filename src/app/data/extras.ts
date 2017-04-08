@@ -1,5 +1,3 @@
-import { Extra } from '../models/extra';
-
 export const extras: Extra[] = [
   {
       "title": "WOCinTech Chat Photoshoots",
