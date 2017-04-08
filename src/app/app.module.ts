@@ -22,7 +22,8 @@ import { AppComponent } from './containers/app/app.component';
 import { MainPageComponent } from './containers/main-page/main-page.component';
 
 import { routes } from './routes';
-// import { reducer } from './reducers';
+import { reducer } from './reducers';
+import { BarComponent } from './foo/bar/bar.component';
 // import { schema } from './db';
 
 @NgModule({
@@ -30,7 +31,8 @@ import { routes } from './routes';
     AppComponent,
     MainPageComponent,
     PanelComponent,
-    HighlightComponent
+    HighlightComponent,
+    BarComponent
   ],
   imports: [
     CommonModule,
@@ -46,13 +48,13 @@ import { routes } from './routes';
      * meta-reducer. This returns all providers for an @ngrx/store
      * based application.
      */
-    // StoreModule.provideStore(reducer),
+    StoreModule.provideStore(reducer),
 
     /**
      * @ngrx/router-store keeps router state up-to-date in the store and uses
      * the store as the single source of truth for the router's state.
      */
-    // RouterStoreModule.connectRouter(),
+    RouterStoreModule.connectRouter(),
 
     /**
      * Store devtools instrument the store retaining past versions of state
